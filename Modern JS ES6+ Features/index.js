@@ -26,7 +26,7 @@ const formattedStrings = people.map(person => {
   } = person;
 
  
-  return `${name} lives in ${city} on ${streetName}`;
+  return ${name} lives in ${city} on ${streetName};
 });
 
 console.log(formattedStrings);
@@ -69,7 +69,7 @@ console.log(mergedObject);
 const username = "Alex";
 const course = "JavaScript Fundamentals";
 
-console.log(`Hello, ${username}, welcome to the ${course}!`);
+console.log(Hello, ${username}, welcome to the ${course}!);
 
 //b
 
@@ -84,9 +84,6 @@ const student = {
 };
 
 //c
-const getFullName = (first, last) => `${first} ${last}`;
+const getFullName = (first, last) => ${first} ${last};
 
-console.log(getFullName("Ada", "Lovelace")); 
-
-
-
+console.log(getFullName("Ada", "Lovelace"));
