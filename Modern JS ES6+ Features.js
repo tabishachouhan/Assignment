@@ -86,4 +86,10 @@ const student = {
 //c
 const getFullName = (first, last) => ${first} ${last};
 
-console.log(getFullName("Ada", "Lovelace"));
+console.log(getFullName("Ada", "Lovelace"))
+
+
+
+
+
+
