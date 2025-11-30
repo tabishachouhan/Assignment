@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Navigation Demo</title>
+    <style>
+
+        body { font-family: sans-serif; padding: 20px; }
+        .container { padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">This is the Old Title</h1>
+
+    <div class="container">
+        <h2>Section 1: Container</h2>
+        <p>This is the first paragraph. Its text color will change to blue.</p>
+        <p>This is the second paragraph. Its text color will also change to blue.</p>
+    </div>
+
+    <div class="container">
+        <h2>Section 2: Another Container</h2>
+        <p>This is a third paragraph.</p>
+    </div>
+
+    <script>
+        
+        const titleElement = document.getElementById('main-title');
+        titleElement.textContent = 'Welcome to the DOM World!';
+
+        
+        const paragraphElements = document.getElementsByTagName('p');
+        
+        
+        for (let i = 0; i < paragraphElements.length; i++) {
+            paragraphElements[i].style.color = 'blue';
+        }
+
+         
+        const firstContainer = document.querySelector('div.container');
+        firstContainer.style.backgroundColor = 'yellow';
+
+    </script>
+</body>
+</html>
