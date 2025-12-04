@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Admin</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    input, select {
+      padding: 10px;
+      margin: 8px 0;
+      width: 250px;
+    }
+    button {
+      padding: 10px 16px;
+      background: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0b70d0;
+    }
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      padding: 15px;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    img {
+      width: 120px;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Book Management</h1>
+
+  <a href="index.html">⬅ Back to Home</a>
+
+  <!-- Add Book Form -->
+  <h2>Add Book</h2>
+  <input type="text" id="title" placeholder="Book Title"><br>
+  <input type="text" id="author" placeholder="Author"><br>
+
+  <select id="category">
+    <option value="Fiction">Fiction</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Technical">Technical</option>
+  </select>
+  <br>
+
+  <button onclick="addBook()">Add Book</button>
+
+  <!-- Sort -->
+  <h2>Sort Books</h2>
+  <button onclick="sortAZ()">Sort by Title A → Z</button>
+  <button onclick="sortZA()">Sort by Title Z → A</button>
+
+  <!-- Filter -->
+  <h2>Filter by Category</h2>
+  <select id="filterCategory" onchange="filterBooks()">
+    <option value="All">All</option>
+    <option value="Fiction">Fiction</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Technical">Technical</option>
+  </select>
+
+  <!-- Books Section -->
+  <h2>Books List</h2>
+  <div class="books" id="booksContainer"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
