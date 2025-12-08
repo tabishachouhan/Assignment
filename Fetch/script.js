@@ -82,13 +82,13 @@ function renderTodos(todos) {
         const toggleButton = document.createElement('button');
         toggleButton.className = 'toggle-btn';
         toggleButton.textContent = todo.completed ? 'Mark Pending' : 'Mark Complete';
-        toggleButton.onclick = () => toggleTodoStatus(todo.id); // Attach toggle handler
+        toggleButton.onclick = () => toggleTodoStatus(todo.id); 
 
        
         const deleteButton = document.createElement('button');
         deleteButton.className = 'delete-btn';
         deleteButton.textContent = 'Delete';
-        deleteButton.onclick = () => deleteTodo(todo.id); // Attach delete handler
+        deleteButton.onclick = () => deleteTodo(todo.id); 
 
         actionsDiv.appendChild(toggleButton);
         actionsDiv.appendChild(deleteButton);
@@ -133,7 +133,7 @@ function toggleTodoStatus(todoId) {
     
     const updatedTodos = currentTodos.map(todo => {
         if (todo.id === todoId) {
-            return { ...todo, completed: !todo.completed }; // Toggle the status
+            return { ...todo, completed: !todo.completed }; 
         }
         return todo;
     });
